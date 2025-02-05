@@ -1,0 +1,733 @@
+{
+	"info": {
+		"_postman_id": "62db397a-49ed-4c10-b226-7fcc8584913c",
+		"name": "TPI Ecom API Live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5211603",
+		"_collection_link": "https://restless-meteor-791849.postman.co/workspace/fdd99a79-4f7a-47bd-8a85-f97c15314937/collection/5211603-62db397a-49ed-4c10-b226-7fcc8584913c?action=share&source=collection_link&creator=5211603"
+	},
+	"item": [
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/users/erp?email=pitinun@hotmail.com",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"users",
+						"erp"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "pitinun@hotmail.com"
+						}
+					]
+				},
+				"description": "### GET /users/erp\n\nThis endpoint retrieves user information from the ERP system based on the provided email.\n\n#### Request\n\n- Query Parameters\n    \n    - email: The email of the user for which the information is to be retrieved.\n        \n\n#### Response\n\nThe response will be a JSON object with the following schema:\n\n``` json\n{\n    \"id\": \"\",\n    \"firstname\": \"\",\n    \"lastname\": \"\",\n    \"phone\": \"\",\n    \"email\": \"\",\n    \"birthdate\": \"\",\n    \"picture\": null,\n    \"point\": 0,\n    \"unread\": 0,\n    \"credit_note\": 0,\n    \"holding_credit_note\": 0,\n    \"credit_note_balance\": 0,\n    \"erp_credit_note\": 0\n}\n\n ```\n\n- id (string): The unique identifier of the user.\n    \n- firstname (string): The first name of the user.\n    \n- lastname (string): The last name of the user.\n    \n- phone (string): The phone number of the user.\n    \n- email (string): The email address of the user.\n    \n- birthdate (string): The birthdate of the user.\n    \n- picture (string): The URL of the user's profile picture, or null if not available.\n    \n- point (number): The points associated with the user.\n    \n- unread (number): The count of unread notifications for the user.\n    \n- credit_note (number): The total credit note amount for the user.\n    \n- holding_credit_note (number): The amount of credit note currently being held by the user.\n    \n- credit_note_balance (number): The balance of credit note for the user.\n    \n- erp_credit_note (number): The ERP credit note amount for the user."
+			},
+			"response": []
+		},
+		{
+			"name": "Get News",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/news/?page=1&limit=500",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"news",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get News Categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": "https://api.tpipolene.co.th/news/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Multiple Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/es-search?product_code=14CS&product_code=111",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"es-search"
+					],
+					"query": [
+						{
+							"key": "product_code",
+							"value": "14CS"
+						},
+						{
+							"key": "product_code",
+							"value": "111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": "https://api.tpipolene.co.th/orders/TC241R000249/data-erp"
+			},
+			"response": []
+		},
+		{
+			"name": "Get order json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy"
+					}
+				],
+				"url": "https://api.tpipolene.co.th/orders/TC241R002732/data-erp"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Categories Master",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": "https://api.tpipolene.co.th/products/categories/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product CatCode",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": "https://api.tpipolene.co.th/products/categories/cate-code/FZ"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Id ***",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy"
+					}
+				],
+				"url": "https://api.tpipolene.co.th/products/erp/1FB9005WG1F1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Variation detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy"
+					}
+				],
+				"url": "https://api.tpipolene.co.th/products/147/subs/19RSRE04"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search keyword",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/es-search?search=สีเทา",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"es-search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "สีเทา"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search ID Multiple",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/es-search?product_code=19Y110N01&product_code=195900&product_code=11CS&product_code=192100",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"es-search"
+					],
+					"query": [
+						{
+							"key": "product_code",
+							"value": "19Y110N01"
+						},
+						{
+							"key": "product_code",
+							"value": "195900"
+						},
+						{
+							"key": "product_code",
+							"value": "11CS"
+						},
+						{
+							"key": "product_code",
+							"value": "192100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search ID ***",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/es-search?search=111&sort_by=product_code&order_by=desc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"es-search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "111"
+						},
+						{
+							"key": "sort_by",
+							"value": "product_code"
+						},
+						{
+							"key": "order_by",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search Product Code ***",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/es-search?product_code=19Z110N01",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"es-search"
+					],
+					"query": [
+						{
+							"key": "product_code",
+							"value": "19Y110N01",
+							"disabled": true
+						},
+						{
+							"key": "product_code",
+							"value": "19Z110N01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search Group",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/es-search?cate_code=FZ0201&seller_id=tpi&page=1&imit=10&orderby=price&op=asc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"es-search"
+					],
+					"query": [
+						{
+							"key": "cate_code",
+							"value": "FZ0201"
+						},
+						{
+							"key": "seller_id",
+							"value": "tpi"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "imit",
+							"value": "10"
+						},
+						{
+							"key": "orderby",
+							"value": "price"
+						},
+						{
+							"key": "op",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search Group  By Cate Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/es-search?cl1=53",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"es-search"
+					],
+					"query": [
+						{
+							"key": "cl1",
+							"value": "53"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search Group Multiple",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/es-search?cate_code=MT0301&cate_code=MT0302&cate_code=FZ0203",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"es-search"
+					],
+					"query": [
+						{
+							"key": "cate_code",
+							"value": "MT0301"
+						},
+						{
+							"key": "cate_code",
+							"value": "MT0302"
+						},
+						{
+							"key": "cate_code",
+							"value": "FZ0203"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductsDegito ***",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "https://api.tpipolene.co.th/products/147"
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts All",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>ID</th>\r",
+							"        <th>Product Code</th>\r",
+							"        <th>Category Code</th>\r",
+							"        <th>Price</th>\r",
+							"        <th>Stock</th>\r",
+							"        <th>Tags</th>\r",
+							"    </tr>\r",
+							"    \r",
+							"    {{#each response.rows}}\r",
+							"        <tr id=row_{{@key}}>\r",
+							"            <td>{{id}}</td>\r",
+							"            <td>{{product_code}}</td>\r",
+							"            <td>{{cate_code}}</td>\r",
+							"            <td>{{price}}</td>\r",
+							"            <td>{{stock}}</td>\r",
+							"            <td>{{tags.[0].tag_key}}</td>\r",
+							"        </tr>\r",
+							"    {{/each}}\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    var res = pm.response.json();\r",
+							"    \r",
+							"    return {response: res};\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/?page=1&limit=10",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductsDegito variation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tpi-key",
+						"value": "tm8DLyAXEXipqKFDlOoz8SqOmoLWKWAy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "https://te-api.tpipolene.co.th/products/126/subs/19XS001"
+			},
+			"response": []
+		},
+		{
+			"name": "Promotion Master",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.tpipolene.co.th/promotions/"
+			},
+			"response": []
+		},
+		{
+			"name": "Promotion Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.tpipolene.co.th/promotions/85/skus"
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductWithPromotion ***",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/1398?with_promotion=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"1398"
+					],
+					"query": [
+						{
+							"key": "with_promotion",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Promotion Master",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.tpipolene.co.th/products/226?with_promotion=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"tpipolene",
+						"co",
+						"th"
+					],
+					"path": [
+						"products",
+						"226"
+					],
+					"query": [
+						{
+							"key": "with_promotion",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Variation Subs By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.tpipolene.co.th/products/1158/subs/1FBWDH204412"
+			},
+			"response": []
+		}
+	]
+}

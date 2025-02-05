@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "TPIPL",
+    "slug": "react-tpipl-expo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/TPI-Polene-Logo.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app requires access to the camera to take photos.",
+        "NSPhotoLibraryUsageDescription": "This app requires access to your photo library to select and upload photos.",
+        "NSMicrophoneUsageDescription": "This app requires access to the microphone to record audio."
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.reacttpiplexpo"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/TPI-Polene-Logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.reacttpiplexpo"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splashImages.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+      ,
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

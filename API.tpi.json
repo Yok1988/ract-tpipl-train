@@ -1,0 +1,69 @@
+{
+    "info": {
+      "_postman_id": "d8b0bfc3-1234-5678-90ab-cdef12345678",
+      "name": "TPI Node.js SQL API",
+      "description": "Collection สำหรับทดสอบ API ที่ดึงข้อมูลจาก InventTable และ SalesTable",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get InventTable Data",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/invent",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "invent"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get SalesTable Data",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/sales",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "sales"
+            ]
+          }
+        },
+        "response": []
+      }
+      ,
+      {
+        "name": "Get CustTable",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/cust",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "cust"
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  

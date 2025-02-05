@@ -1,0 +1,42 @@
+{
+    "info": {
+      "_postman_id": "12345",
+      "name": "My API Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "GET Customer",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/customer",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["customers"]
+          }
+        }
+      },
+      {
+        "name": "POST Add Customer",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/customer",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["customers"]
+          }
+        }
+      }
+    ]
+  }
+  
