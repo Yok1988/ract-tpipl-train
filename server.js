@@ -8,12 +8,6 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-/* DB_SERVER=axclone
-DB_USER=onlagent
-DB_PASSWORD=AgentOnl
-DB_DATABASE=TPIAX51LIVE
-DB_PORT=1433
-PORT=5000 */
 
 console.log("🌍 API Ready at:", `http://localhost:${PORT}`);
 console.log("🔗 Database Config:", {
